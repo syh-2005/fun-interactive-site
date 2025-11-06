@@ -84,4 +84,26 @@ button {
     min-height: 30px; /* 防止内容变化时页面抖动 */
     padding: 10px;
     border-radius: 10px;
+
+}
+/* 把这段代码复制到 style.css 的最后 */
+/* 适配手机屏幕（屏幕宽度≤600px时生效） */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px; /* 手机端减少内边距，避免内容溢出 */
+  }
+  h1 {
+    font-size: 24px; /* 缩小标题文字，适配小屏幕 */
+  }
+  .question, .response {
+    font-size: 18px; /* 缩小问题和回复文字 */
+  }
+  .buttons {
+    flex-direction: column; /* 手机端按钮垂直排列（默认是水平） */
+    gap: 15px; /* 垂直排列时减小间距 */
+  }
+  button {
+    padding: 10px 20px; /* 缩小按钮尺寸，更适合手机点击 */
+    width: 100%; /* 按钮占满容器宽度，方便触摸 */
+  }
 }
