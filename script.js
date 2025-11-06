@@ -27,4 +27,13 @@ noBtn.addEventListener('mouseover', () => {
 
 noBtn.addEventListener('click', () => {
     response.textContent = '呜呜呜...再考虑一下嘛~ 🥺';
+
 });
+// 把这段代码复制到 script.js 的最后
+// 页面完全加载后隐藏加载动画
+window.onload = function() {
+  // 延迟300毫秒隐藏，让用户看到加载提示
+  setTimeout(() => {
+    document.getElementById('loader').style.display = 'none';
+  }, 300);
+};
